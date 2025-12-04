@@ -133,15 +133,15 @@ public class Cache {
             TindroidApp.retainCache(sInstance);
         }
 
-        FirebaseMessaging fbId = FirebaseMessaging.getInstance();
-        //noinspection ConstantConditions: Google lies about getInstance not returning null.
-        if (fbId != null) {
-            fbId.getToken().addOnSuccessListener(token -> {
-                if (sInstance.mTinode != null) {
-                    sInstance.mTinode.setDeviceToken(token);
-                }
-            });
-        }
+//        FirebaseMessaging fbId = FirebaseMessaging.getInstance();
+//        //noinspection ConstantConditions: Google lies about getInstance not returning null.
+//        if (fbId != null) {
+//            fbId.getToken().addOnSuccessListener(token -> {
+//                if (sInstance.mTinode != null) {
+//                    sInstance.mTinode.setDeviceToken(token);
+//                }
+//            });
+//        }
         return sInstance.mTinode;
     }
 

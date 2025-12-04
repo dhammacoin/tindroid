@@ -45,7 +45,7 @@ import androidx.media3.common.util.UnstableApi;
 import androidx.media3.database.StandaloneDatabaseProvider;
 import androidx.media3.datasource.cache.LeastRecentlyUsedCacheEvictor;
 import androidx.media3.datasource.cache.SimpleCache;
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
+//import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -222,7 +222,7 @@ public class TindroidApp extends Application implements DefaultLifecycleObserver
         EmojiCompat.init(new FontRequestEmojiCompatConfig(this, fontRequest));
 
         // Disable Crashlytics for debug builds.
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG);
+//        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG);
 
         BroadcastReceiver br = new BroadcastReceiver() {
             @Override
